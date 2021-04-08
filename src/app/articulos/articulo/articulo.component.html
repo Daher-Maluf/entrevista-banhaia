@@ -1,0 +1,13 @@
+
+    <mat-card-header>
+      <mat-card-title class="title">{{ articulo.nombre }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="articulo.imagen">
+    <mat-card-content><p>{{articulo.descripcion}}</p></mat-card-content>
+    <mat-card-actions>
+      <button mat-mini-fab color="primary" aria-label=" boton para editar nombre" (click)="onEdit(articulo)"> <mat-icon>edit</mat-icon> </button>
+    </mat-card-actions>
+    <mat-card-footer>
+     <small>{{articulo.creacion | date}}</small>
+    </mat-card-footer>
+    
