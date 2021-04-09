@@ -10,7 +10,7 @@ import { NmsHttpClientService } from 'src/services/core/http-client';
   styleUrls: ['./articulo.component.css']
 })
 export class ArticuloComponent implements OnInit {
-  @Input()articulo: any;
+  @Input()articulo: Articulo;
 
 
   constructor(private httpSrv: NmsHttpClientService, public dialog: MatDialog) { }
@@ -38,7 +38,6 @@ export class ArticuloComponent implements OnInit {
     dialogConfig.autoFocus = true;
     dialogConfig.data = {
       nombre: this.articulo.nombre,
-
     };
     const dialogRef = this.dialog.open(DialogComponent, dialogConfig);
     dialogRef.afterClosed().subscribe(
@@ -46,7 +45,9 @@ export class ArticuloComponent implements OnInit {
         console.log('Dialog output:', JSON.stringify(result));
         if (result && result.nombre.length > 0) {
           this.actualizarArticulo(result.nombre);
+          
         }
+        
       }
     );
   }

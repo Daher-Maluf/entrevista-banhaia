@@ -7,7 +7,7 @@ export interface Articulo {
   modificado: string;
   nombre: string;
   descripcion: string;
-  image: string;
+  imagen: string;
 }
 [];
 

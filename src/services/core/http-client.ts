@@ -37,7 +37,7 @@ export class NmsHttpClientService {
   }
 
 
-  put<T>( data: Partial<Articulo>): Observable<any> {
+  put<T>( data: Partial<Articulo>): Observable<T> {
     return this.http.put<T>(`${this.apiUrl}entrevista/articulos/${data.id}`, data, {
     headers: new HttpHeaders().set('Content-Type', 'application/json')
   });

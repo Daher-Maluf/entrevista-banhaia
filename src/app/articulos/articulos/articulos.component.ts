@@ -14,7 +14,6 @@ export class ArticulosComponent implements OnInit {
          
   constructor(private service: ArticuloService) {
 
-
   }
 
   ngOnInit(): void {
