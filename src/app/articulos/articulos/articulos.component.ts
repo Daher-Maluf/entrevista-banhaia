@@ -19,17 +19,8 @@ export class ArticulosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loadData();
+   this.articulos$ = this.service.getArticulos();
+    
   }
 
-
-
-
-  loadData() {
-    this.service.getArticulos().subscribe((data) => {
-      console.log(data);
-      this.data = data;
-      this.articulos$ = of(this.data);
-    });
-  }
 }

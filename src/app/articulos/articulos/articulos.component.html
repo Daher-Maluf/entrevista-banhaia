@@ -2,8 +2,8 @@
 
 <div class="content" *ngIf="articulos$ | async as articulos" >
     <div fxLayout="row wrap" fxLayoutGap="16px grid" >
-        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let articulo of articulos" >
-            <mat-card class=" card mat-elevation-z4" >
+        <div fxFlex="25%"  fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let articulo of articulos" >
+            <mat-card class="animated fade In card mat-elevation-z4" >
                 <app-articulo [articulo]="articulo"></app-articulo>
             </mat-card>
         </div>
